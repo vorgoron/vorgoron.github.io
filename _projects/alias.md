@@ -15,7 +15,8 @@ tags:
   - игра
   - удмуртский язык
   - android
-play_store_link: https://play.google.com/store/apps/details?id=com.vorgoron.udm_alias
+#play_store_link: https://play.google.com/store/apps/details?id=com.vorgoron.udm_alias
+apk_link: /assets/apk/Ӧлиас_1.0.2.apk
 
 ---
 
