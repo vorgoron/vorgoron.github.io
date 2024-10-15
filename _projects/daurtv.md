@@ -5,17 +5,18 @@ description: удмурт кылын интернет-телеканал но р
 order: 4
 avatar: /assets/images/daurtv/logo.webp
 screenshots:
-  - /assets/images/daurtv/screen1.webp
-  - /assets/images/daurtv/screen2.webp
-  - /assets/images/daurtv/screen3.webp
-  - /assets/images/daurtv/screen4.webp
-  - /assets/images/daurtv/screen5.webp
+  - /assets/images/daurtv/screen1.jpg
+  - /assets/images/daurtv/screen2.jpg
+  - /assets/images/daurtv/screen3.jpg
+  - /assets/images/daurtv/screen4.jpg
+  - /assets/images/daurtv/screen5.jpg
+  - /assets/images/daurtv/screen6.jpg
 tags:
   - развлечение
   - удмуртский язык
   - android
   - android TV
-play_store_link: https://play.google.com/store/apps/details?id=com.vorgoron.daurtv
+#play_store_link: https://play.google.com/store/apps/details?id=com.vorgoron.daurtv
 apk_link: /assets/apk/daurtv-release.apk
 
 ---
