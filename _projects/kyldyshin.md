@@ -13,7 +13,9 @@ tags:
   - обучение
   - удмуртский язык
   - android
-play_store_link: https://play.google.com/store/apps/details?id=com.vorgoron.learning.udmurt
+#play_store_link: https://play.google.com/store/apps/details?id=com.vorgoron.learning.udmurt
+rustore_link: https://www.rustore.ru/catalog/app/com.vorgoron.learning.udmurt
+apk_link: /assets/apk/Кылдысин_0.2.7.apk
 
 ---
 
