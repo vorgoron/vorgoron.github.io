@@ -16,6 +16,7 @@ tags:
   - android
   - android TV
 play_store_link: https://play.google.com/store/apps/details?id=com.vorgoron.daurtv
+apk_link: /assets/apk/daurtv-release.apk
 
 ---
 
