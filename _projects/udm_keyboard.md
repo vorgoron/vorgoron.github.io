@@ -13,7 +13,9 @@ tags:
   - клавиатура
   - удмуртский язык
   - android
-play_store_link: https://play.google.com/store/apps/details?id=com.udmurtlyk.extrainputmethod.latin
+#play_store_link: https://play.google.com/store/apps/details?id=com.udmurtlyk.extrainputmethod.latin
+apk_link: /assets/apk/Удмуртская_клавиатура_2.0.apk
+
 ---
 
 Основные возможности:
