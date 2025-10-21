@@ -356,6 +356,14 @@ h1 {
   background: linear-gradient(135deg, #8e44ad 0%, #7d3c98 100%);
 }
 
+.btn-github {
+  background: linear-gradient(135deg, #333333 0%, #1a1a1a 100%);
+}
+
+.btn-github:hover {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+}
+
 /* Back to Projects Link */
 .back-to-projects {
   display: inline-flex;
