@@ -58,6 +58,10 @@ title: Проекты
             button.addEventListener('click', function () {
                 const selectedTag = button.dataset.tag;
 
+                // Update active state
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
                 projectCards.forEach(function (card) {
                     const tags = card.dataset.tags.split(',');
 
@@ -69,6 +73,12 @@ title: Проекты
                 });
             });
         });
+
+        // Set "Все" as active by default
+        const allButton = document.querySelector('.filter-button[data-tag="all"]');
+        if (allButton) {
+            allButton.classList.add('active');
+        }
     });
 
     function openProjectInformation(url) {
