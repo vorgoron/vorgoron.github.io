@@ -11,11 +11,10 @@ screenshots:
   - /assets/images/minecraft-udmurt-mod/screen4.png
   - /assets/images/minecraft-udmurt-mod/screen5.png
   - /assets/images/minecraft-udmurt-mod/screen6.png
-  - /assets/images/minecraft-udmurt-mod/screen7.png
 tags:
   - игра
   - Шундыкар
-  
+
 github_link: https://github.com/vorgoron/minecraft-udmurt-mod
 
 ---
