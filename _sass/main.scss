@@ -372,10 +372,11 @@ h1 {
   color: #0056b3;
 }
 
-.back-to-projects:before {
-  content: "←";
+.back-to-projects .arrow {
   margin-right: 0.5rem;
   font-size: 1.25rem;
+  /* Optionally, set display to inline-block for better alignment */
+  display: inline-block;
 }
 
 /* Responsive Design */
