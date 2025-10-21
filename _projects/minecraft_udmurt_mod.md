@@ -3,8 +3,14 @@ layout: project
 title: Удмуртский мод для Minecraft
 description: Окунись в удмуртскую культуру прямо в Minecraft!
 order: 6
-avatar: /assets/images/minecraft-udmurt-mod/logo.svg
+avatar: /assets/images/minecraft-udmurt-mod/logo.png
 screenshots:
+  - /assets/images/minecraft-udmurt-mod/screen1.png
+  - /assets/images/minecraft-udmurt-mod/screen2.png
+  - /assets/images/minecraft-udmurt-mod/screen3.png
+  - /assets/images/minecraft-udmurt-mod/screen4.png
+  - /assets/images/minecraft-udmurt-mod/screen5.png
+  - /assets/images/minecraft-udmurt-mod/screen6.png
 tags:
   - игра
   - удмуртский язык
