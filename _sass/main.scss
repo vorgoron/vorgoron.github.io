@@ -172,8 +172,7 @@ h1 {
   background: #f0f7ff;
 }
 
-.filter-button.active,
-.filter-button[data-tag="all"]:hover {
+.filter-button.active {
   background: #007bff;
   color: #ffffff;
   border-color: #007bff;
