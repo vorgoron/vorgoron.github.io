@@ -5,12 +5,12 @@ description: Окунись в удмуртскую культуру прямо 
 order: 6
 avatar: /assets/images/minecraft-udmurt-mod/logo.png
 screenshots:
-  - /assets/images/minecraft-udmurt-mod/screen1.png
-  - /assets/images/minecraft-udmurt-mod/screen2.png
-  - /assets/images/minecraft-udmurt-mod/screen3.png
-  - /assets/images/minecraft-udmurt-mod/screen4.png
-  - /assets/images/minecraft-udmurt-mod/screen5.png
-  - /assets/images/minecraft-udmurt-mod/screen6.png
+  - /assets/images/minecraft-udmurt-mod/screen1.jpeg
+  - /assets/images/minecraft-udmurt-mod/screen2.jpeg
+  - /assets/images/minecraft-udmurt-mod/screen3.jpeg
+  - /assets/images/minecraft-udmurt-mod/screen4.jpeg
+  - /assets/images/minecraft-udmurt-mod/screen5.jpeg
+  - /assets/images/minecraft-udmurt-mod/screen6.jpeg
 tags:
   - игра
   - Шундыкар
@@ -60,7 +60,8 @@ github_link: https://github.com/vorgoron/minecraft-udmurt-mod
 ### Шаг 3: Установи мод
 1. Открой папку с модами:
    - Windows: Нажми `Win + R`, введи `%appdata%/.minecraft/mods` и нажми Enter
-   - Linux/Mac: `~/.minecraft/mods`
+   - Mac: `~/Library/Application Support/minecraft/mods`
+   - Linux: `~/.minecraft/mods`
 2. Если папки `mods` нет — создай её
 3. Скопируй скачанный `.jar` файл в папку `mods`
 
