@@ -34,6 +34,9 @@ theme: minima
 plugins:
   - jekyll-feed
 
+require:
+  - ./plugins/tags_generator
+
 sass:
   quiet_deps: true
   load_paths:
