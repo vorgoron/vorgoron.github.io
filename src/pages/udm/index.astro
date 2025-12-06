@@ -1,0 +1,33 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+---
+
+<!doctype html>
+<html lang="udm">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Ӟечбур! Привет! Hello! 👋</h1>
+			<p>
+				Гажаса ӧтисько аслам вотэсбамам. Мон Гири, Android-разработчик.
+			</p>
+			<p>
+				Татысь тӥ мынам <a href="/udm/projects">проектъёсме</a> шедьтыны быгатоды но <a href="/udm/blog">блогме</a> лыдӟыны быгатоды.
+			</p>
+            <p>
+                Мон мобильной приложениос лэсьтонэн 10 арлэсь кема вырисько ни. Пайдаё но умой тӥрлыкъёс кылдытъяны яратӥсько.
+            </p>
+            <div style="margin-top: 2rem;">
+                <h3>Берпуметӥ проектъёсы</h3>
+                <p><a href="/udm/projects">Вань проектъёсты учконо →</a></p>
+            </div>
+		</main>
+		<Footer />
+	</body>
+</html>
