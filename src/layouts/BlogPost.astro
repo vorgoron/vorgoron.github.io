@@ -9,9 +9,24 @@ import Header from '../components/Header.astro';
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const locale = Astro.currentLocale || 'ru';
+
+const t = {
+	ru: {
+		lastUpdated: 'Последнее обновление',
+	},
+	udm: {
+		lastUpdated: 'Берпуметӥ выльдӥськон',
+	},
+	en: {
+		lastUpdated: 'Last updated on',
+	},
+};
+
+const labels = t[locale as keyof typeof t] || t.ru;
 ---
 
-<html lang="en">
+<html lang={locale}>
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
@@ -69,7 +84,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 							{
 								updatedDate && (
 									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
+										{labels.lastUpdated} <FormattedDate date={updatedDate} />
 									</div>
 								)
 							}

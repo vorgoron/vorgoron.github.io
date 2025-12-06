@@ -1,0 +1,33 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Ӟечбур! Привет! Hello! 👋</h1>
+			<p>
+				Welcome to my personal website. I am Grigory, an Android developer.
+			</p>
+			<p>
+				Here you can find my <a href="/en/projects">projects</a> and read my <a href="/en/blog">blog</a>.
+			</p>
+            <p>
+                I have been developing mobile applications for over 10 years. I love creating useful and convenient tools.
+            </p>
+            <div style="margin-top: 2rem;">
+                <h3>Latest projects</h3>
+                <p><a href="/en/projects">View all projects →</a></p>
+            </div>
+		</main>
+		<Footer />
+	</body>
+</html>

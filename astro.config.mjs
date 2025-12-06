@@ -9,7 +9,7 @@ export default defineConfig({
 	site: 'https://vorgoron.ru',
 	i18n: {
 		defaultLocale: 'ru',
-		locales: ['ru', 'udm'],
+		locales: ['ru', 'udm', 'en'],
 		routing: {
 			prefixDefaultLocale: false,
 		},
