@@ -32,6 +32,8 @@ const projects = defineCollection({
         tags: z.array(z.string()).optional(),
         play_store_link: z.string().optional(),
         apk_link: z.string().optional(),
+        download_link: z.string().optional(),
+        download_label: z.string().optional(),
         app_store_link: z.string().optional(),
         github_link: z.string().optional(),
     })
