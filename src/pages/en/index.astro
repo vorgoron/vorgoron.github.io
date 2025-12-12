@@ -1,8 +1,14 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
+import SolarSystem from '../../components/SolarSystem.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+
+const projects = (await getCollection('projects')).sort(
+	(a, b) => (a.data.order || 0) - (b.data.order || 0)
+);
 ---
 
 <!doctype html>
@@ -14,20 +20,17 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 		<Header />
 		<main>
 			<h1>Ӟечбур! Привет! Hello! 👋</h1>
-			<p>
-				Welcome to my personal website. I am Grigory, an Android developer.
-			</p>
-			<p>
-				Here you can find my <a href="/en/projects">projects</a> and read my <a href="/en/blog">blog</a>.
-			</p>
-            <p>
-                I have been developing mobile applications for over 10 years. I love creating useful and convenient tools.
-            </p>
-            <div style="margin-top: 2rem;">
-                <h3>Latest projects</h3>
-                <p><a href="/en/projects">View all projects →</a></p>
-            </div>
+			<p>I'm Grigory, an Android developer. The Sun is me; the planets are my projects.</p>
+			<SolarSystem projects={projects} name="Grigory" baseHref="/en" />
+			<p style="margin-top: 1.5rem;"><a href="/en/projects">View all projects →</a></p>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	main {
+		width: calc(100% - 2em);
+		max-width: 1100px;
+	}
+</style>
