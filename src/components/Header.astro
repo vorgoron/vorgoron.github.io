@@ -34,7 +34,7 @@ const labels = t[locale as keyof typeof t] || t.ru;
 <header>
 	<nav>
 		<h2><a href={base || '/'}>{SITE_TITLE}</a></h2>
-		<div class="internal-links">
+		<div class="internal-links desktop-only">
 			<HeaderLink href={base || '/'} isActive={pathname === base || pathname === '/'}>{labels.home}</HeaderLink>
 			<HeaderLink href={`${base}/blog`} isActive={pathname.startsWith(`${base}/blog`)}>{labels.blog}</HeaderLink>
 			<HeaderLink href={`${base}/projects`} isActive={pathname.startsWith(`${base}/projects`)}>{labels.projects}</HeaderLink>
@@ -69,7 +69,7 @@ const labels = t[locale as keyof typeof t] || t.ru;
 				>
 			</a>
 		</div>
-		<div class="lang-switch">
+		<div class="lang-switch desktop-only">
 			<a href={cleanPath} class={locale === 'ru' ? 'active' : ''} title="Русский">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="24" height="16">
 					<rect width="900" height="600" fill="#fff"/>
@@ -98,6 +98,51 @@ const labels = t[locale as keyof typeof t] || t.ru;
 				</svg>
 			</a>
 		</div>
+		<details class="mobile-nav">
+			<summary class="menu-toggle" aria-controls="mobile-menu">
+				<span class="sr-only">Menu</span>
+				<svg viewBox="0 0 24 24" aria-hidden="true" width="28" height="28">
+					<path fill="currentColor" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />
+				</svg>
+			</summary>
+			<div id="mobile-menu" class="mobile-menu">
+				<div class="mobile-links">
+					<HeaderLink href={base || '/'} isActive={pathname === base || pathname === '/'}>{labels.home}</HeaderLink>
+					<HeaderLink href={`${base}/blog`} isActive={pathname.startsWith(`${base}/blog`)}>{labels.blog}</HeaderLink>
+					<HeaderLink href={`${base}/projects`} isActive={pathname.startsWith(`${base}/projects`)}>{labels.projects}</HeaderLink>
+					<HeaderLink href={`${base}/about`} isActive={pathname.startsWith(`${base}/about`)}>{labels.about}</HeaderLink>
+				</div>
+				<div class="lang-switch mobile-lang">
+					<a href={cleanPath} class={locale === 'ru' ? 'active' : ''} title="Русский">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="24" height="16">
+							<rect width="900" height="600" fill="#fff"/>
+							<rect y="200" width="900" height="400" fill="#0039a6"/>
+							<rect y="400" width="900" height="200" fill="#d52b1e"/>
+						</svg>
+					</a>
+					<a href={`/udm${cleanPath === '/' ? '' : cleanPath}`} class={locale === 'udm' ? 'active' : ''} title="Удмурт">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 270" width="24" height="16">
+							<rect width="180" height="270" fill="#000"/>
+							<rect width="180" height="270" x="180" fill="#fff"/>
+							<rect width="180" height="270" x="360" fill="#d21"/>
+							<polygon fill="#d21" points="245,60 345,160 195,160 295,60 295,210 195,110 345,110 245,210"/>
+						</svg>
+					</a>
+					<a href={`/en${cleanPath === '/' ? '' : cleanPath}`} class={locale === 'en' ? 'active' : ''} title="English">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1235 650" width="24" height="16">
+							<rect width="1235" height="650" fill="#b22234"/>
+							<rect y="50" width="1235" height="50" fill="#fff"/>
+							<rect y="150" width="1235" height="50" fill="#fff"/>
+							<rect y="250" width="1235" height="50" fill="#fff"/>
+							<rect y="350" width="1235" height="50" fill="#fff"/>
+							<rect y="450" width="1235" height="50" fill="#fff"/>
+							<rect y="550" width="1235" height="50" fill="#fff"/>
+							<rect width="494" height="350" fill="#3c3b6e"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</details>
 	</nav>
 </header>
 <style>
@@ -131,6 +176,28 @@ const labels = t[locale as keyof typeof t] || t.ru;
 		text-decoration: none;
 		border-bottom-color: var(--accent);
 	}
+	.mobile-nav {
+		display: none;
+	}
+	.menu-toggle {
+		display: none;
+		align-items: center;
+		justify-content: center;
+		padding: 0.75em 0.5em;
+		background: transparent;
+		border: 0;
+		color: rgb(var(--black));
+		cursor: pointer;
+	}
+	.menu-toggle::-webkit-details-marker {
+		display: none;
+	}
+	.menu-toggle::marker {
+		content: '';
+	}
+	.menu-toggle svg {
+		display: block;
+	}
 	.lang-switch {
 		display: flex;
 		gap: 0.5em;
@@ -161,6 +228,41 @@ const labels = t[locale as keyof typeof t] || t.ru;
 	@media (max-width: 720px) {
 		.social-links {
 			display: none;
+		}
+		.desktop-only {
+			display: none;
+		}
+		.mobile-nav {
+			display: block;
+		}
+		.menu-toggle {
+			display: inline-flex;
+			list-style: none;
+		}
+		.mobile-menu {
+			display: none;
+		}
+		.mobile-nav[open] .mobile-menu {
+			display: block;
+		}
+		.mobile-menu {
+			padding: 0.25em 1em 1em;
+			border-top: 1px solid rgb(var(--gray-light));
+		}
+		.mobile-links {
+			display: flex;
+			flex-direction: column;
+		}
+		.mobile-links a {
+			padding: 0.75em 0.5em;
+			border-bottom-width: 0;
+		}
+		.mobile-lang {
+			margin-left: 0;
+			padding-top: 0.25em;
+		}
+		.mobile-lang a {
+			padding: 0.5em 0.5em;
 		}
 	}
 </style>
