@@ -14,7 +14,8 @@ tags:
   - клавиатура
   - удмуртский язык
   - android
-play_store_link: https://play.google.com/store/apps/details?id=com.anysoftkeyboard.languagepack.udmurt
+#play_store_link: https://play.google.com/store/apps/details?id=com.anysoftkeyboard.languagepack.udmurt
+apk_link: /assets/apk/Удмурт_клавиатура_1.3.apk
 ---
 
 Удмуртский языковый пакет для AnySoftKeyboard.
