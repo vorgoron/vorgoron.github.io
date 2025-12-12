@@ -4,6 +4,7 @@ title: Удмурт Клавиатура
 description: Удмуртский языковый пакет для клавиатуры AnySoftKeyboard.
 order: 1
 avatar: /assets/images/udmkeyboard_old/logo.webp
+shareImage: /assets/images/udmkeyboard_old/screen1.webp
 screenshots:
   - /assets/images/udmkeyboard_old/screen1.webp
   - /assets/images/udmkeyboard_old/screen2.webp

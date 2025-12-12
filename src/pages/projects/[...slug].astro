@@ -15,13 +15,15 @@ type Props = CollectionEntry<'projects'>;
 
 const project = Astro.props;
 const { Content } = await render(project);
-const { title, description, avatar, screenshots, play_store_link, apk_link, download_link, download_label, github_link } = project.data;
+const { title, description, avatar, shareImage, screenshots, play_store_link, apk_link, download_link, download_label, github_link } = project.data;
+
+const seoImage = shareImage || screenshots?.[0] || avatar;
 ---
 
 <!doctype html>
 <html lang="ru">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} image={seoImage} />
         <style>
             main {
                 width: 960px;

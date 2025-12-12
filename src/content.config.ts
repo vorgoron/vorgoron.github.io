@@ -28,6 +28,7 @@ const projects = defineCollection({
         description: z.string(),
         order: z.number().optional(),
         avatar: z.string().optional(),
+        shareImage: z.string().optional(),
         screenshots: z.array(z.string()).optional(),
         tags: z.array(z.string()).optional(),
         play_store_link: z.string().optional(),
